@@ -47,11 +47,11 @@ fakeClick("click", mainMenu);
 setTimeout(function() { 
   var selfService = getElement("fldra_CO_EMPLOYEE_SELF_SERVICE", false);
   fakeClick("click", selfService);
-}, 3000);
+}, 1000);
 setTimeout(function() {
   var academicRecords = getElement("fldra_HCCC_ACADEMIC_RECORDS", false);
   fakeClick("click", academicRecords);
-}, 3000);
+}, 2000);
 setTimeout(function() { 
   var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
   fakeClick("click", unofficialTranscript);
@@ -61,7 +61,9 @@ setTimeout(function() {
   transcriptSelect.options[3].selected = true;
   var go = getElement("GO", true);
   fakeClick("click", go);
-}, 5000);
+}, 4000);
 
-var text = getElement("ACE_$ICField5$0", true);
-selectElementContents(text);
+setTimeout(function() {
+  var text = getElement("ACE_$ICField5$0", true);
+  selectElementContents(text);
+}, 6000);
