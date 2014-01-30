@@ -61,9 +61,9 @@ setTimeout(function() {
   transcriptSelect.options[3].selected = true;
   var go = getElement("GO", true);
   fakeClick("click", go);
-}, 4000);
+}, 6000);
 
 setTimeout(function() {
   var text = getElement("ACE_$ICField5$0", true);
   selectElementContents(text);
-}, 6000);
+}, 8000);
