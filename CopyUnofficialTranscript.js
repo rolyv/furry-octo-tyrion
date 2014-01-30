@@ -42,6 +42,8 @@ function waitForElement(el, isFrame){
       elem = document.getElementById(el);
     }
   }
+  
+  return elem;
 }
 
 var mainMenu = waitForElement("pthnavbca_PORTAL_ROOT_OBJECT", false);
