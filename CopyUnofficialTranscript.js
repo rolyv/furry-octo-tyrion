@@ -44,21 +44,24 @@ function getElement(el, isFrame){
 
 var mainMenu = getElement("pthnavbca_PORTAL_ROOT_OBJECT", false);
 fakeClick("click", mainMenu);
-setTimeout(function() { }, 10000);
-var selfService = getElement("fldra_CO_EMPLOYEE_SELF_SERVICE", false);
-fakeClick("click", selfService);
-setTimeout(function() { }, 10000);
-var academicRecords = getElement("fldra_HCCC_ACADEMIC_RECORDS", false);
-fakeClick("click", academicRecords);
-setTimeout(function() { }, 10000);
-var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
-fakeClick("click", unofficialTranscript);
-setTimeout(function() { }, 10000);
-var transcriptSelect = getElement("DERIVED_AA2_TSCRPT_TYPE3", true);
-transcriptSelect.options[3].selected = true;
-var go = getElement("GO", true);
-fakeClick("click", go);
-setTimeout(function() { }, 10000);
+setTimeout(function() { 
+  var selfService = getElement("fldra_CO_EMPLOYEE_SELF_SERVICE", false);
+  fakeClick("click", selfService);
+}, 3000);
+setTimeout(function() {
+  var academicRecords = getElement("fldra_HCCC_ACADEMIC_RECORDS", false);
+  fakeClick("click", academicRecords);
+}, 3000);
+setTimeout(function() { 
+  var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
+  fakeClick("click", unofficialTranscript);
+}, 3000);
+setTimeout(function() { 
+  var transcriptSelect = getElement("DERIVED_AA2_TSCRPT_TYPE3", true);
+  transcriptSelect.options[3].selected = true;
+  var go = getElement("GO", true);
+  fakeClick("click", go);
+}, 5000);
 
 var text = getElement("ACE_$ICField5$0", true);
 selectElementContents(text);
