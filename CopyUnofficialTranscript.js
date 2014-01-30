@@ -31,33 +31,34 @@ function selectElementContents(el) {
   }
 }
 
-function waitForElement(el, isFrame){
-  var elem = null;
-  
-  while (!elem) {
-    if (isFrame) {  
-      elem = window.frames[0].document.getElementById(el);
-    }
-    else {
-      elem = document.getElementById(el);
-    }
+function getElement(el, isFrame){
+  if (isFrame) {  
+    var elem = window.frames[0].document.getElementById(el);
+  }
+  else {
+    var elem = document.getElementById(el);
   }
   
   return elem;
 }
 
-var mainMenu = waitForElement("pthnavbca_PORTAL_ROOT_OBJECT", false);
+var mainMenu = getElement("pthnavbca_PORTAL_ROOT_OBJECT", false);
 fakeClick("click", mainMenu);
-var selfService = waitForElement("fldra_CO_EMPLOYEE_SELF_SERVICE", false);
+setTimeout(function() { }, 2000);
+var selfService = getElement("fldra_CO_EMPLOYEE_SELF_SERVICE", false);
 fakeClick("click", selfService);
-var academicRecords = waitForElement("fldra_HCCC_ACADEMIC_RECORDS", false);
+setTimeout(function() { }, 2000);
+var academicRecords = getElement("fldra_HCCC_ACADEMIC_RECORDS", false);
 fakeClick("click", academicRecords);
-var unofficialTranscript = waitForElement("crefli_HC_SS_AA_REPORT1_GBL", false);
+setTimeout(function() { }, 2000);
+var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
 fakeClick("click", unofficialTranscript);
-var transcriptSelect = waitForElement("DERIVED_AA2_TSCRPT_TYPE3", true);
+setTimeout(function() { }, 2000);
+var transcriptSelect = getElement("DERIVED_AA2_TSCRPT_TYPE3", true);
 transcriptSelect.options[3].selected = true;
-var go = waitForElement("GO", true);
+var go = getElement("GO", true);
 fakeClick("click", go);
+setTimeout(function() { }, 3000);
 
-var text = waitForElement("ACE_$ICField5$0", true);
+var text = getElement("ACE_$ICField5$0", true);
 selectElementContents(text);
