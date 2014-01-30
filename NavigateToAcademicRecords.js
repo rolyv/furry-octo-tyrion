@@ -35,4 +35,4 @@ setTimeout(function() {
 setTimeout(function() { 
   var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
   fakeClick("click", unofficialTranscript);
-}, 100);
+}, 3000);
