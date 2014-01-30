@@ -32,3 +32,7 @@ setTimeout(function() {
   var academicRecords = getElement("fldra_HCCC_ACADEMIC_RECORDS", false);
   fakeClick("click", academicRecords);
 }, 2000);
+setTimeout(function() { 
+  var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
+  fakeClick("click", unofficialTranscript);
+}, 100);

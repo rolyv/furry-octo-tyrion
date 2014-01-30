@@ -43,17 +43,13 @@ function getElement(el, isFrame){
 }
 
 setTimeout(function() { 
-  var unofficialTranscript = getElement("crefli_HC_SS_AA_REPORT1_GBL", false);
-  fakeClick("click", unofficialTranscript);
-}, 100);
-setTimeout(function() { 
   var transcriptSelect = getElement("DERIVED_AA2_TSCRPT_TYPE3", true);
   transcriptSelect.options[3].selected = true;
   var go = getElement("GO", true);
   fakeClick("click", go);
-}, 1000);
+}, 100);
 
 setTimeout(function() {
   var text = getElement("ACE_$ICField5$0", true);
   selectElementContents(text);
-}, 3000);
+}, 5000);
